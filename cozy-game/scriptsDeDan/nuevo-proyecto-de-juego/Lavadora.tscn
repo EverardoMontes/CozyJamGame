@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Lavadora.gd" id="1_lava"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lava"]
+size = Vector2(128, 128)
+
+[node name="Lavadora" type="Area2D" groups=["lavadora"]]
+script = ExtResource("1_lava")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+mouse_filter = 2
+color = Color(0.2, 0.5, 0.8, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_lava")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true

@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cmwdw8kgbef6b"]
+
+[ext_resource type="PackedScene" path="res://CestoRopa.tscn" id="1_0e48y"]
+[ext_resource type="PackedScene" path="res://Lavadora.tscn" id="2_epypp"]
+[ext_resource type="PackedScene" uid="uid://c4en7y3nqbg26" path="res://Mostrador.tscn" id="3_epypp"]
+[ext_resource type="Script" uid="uid://cfjkh8tgwh8uk" path="res://Mostrador.gd" id="4_0hol4"]
+
+[node name="Main" type="Node2D" unique_id=871998950]
+
+[node name="CestoRopa" parent="." unique_id=1883183964 instance=ExtResource("1_0e48y")]
+position = Vector2(483, 153)
+
+[node name="Lavadora" parent="." unique_id=780866384 instance=ExtResource("2_epypp")]
+position = Vector2(230, 286)
+
+[node name="Mostrador" parent="." unique_id=974710459 groups=["entrega"] instance=ExtResource("3_epypp")]
+position = Vector2(709, 55)
+script = ExtResource("4_0hol4")
