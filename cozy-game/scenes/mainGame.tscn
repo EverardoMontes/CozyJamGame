@@ -1,0 +1,93 @@
+[gd_scene format=3 uid="uid://dgo7m574gmkeo"]
+
+[ext_resource type="Texture2D" uid="uid://dsart7adjo8ae" path="res://sprites/background.png" id="1_mw4qg"]
+[ext_resource type="Texture2D" uid="uid://mfwx77wgwkye" path="res://sprites/window.png" id="2_mmojm"]
+[ext_resource type="Texture2D" uid="uid://bxriq8x82a2vr" path="res://sprites/lavadoraCerrada.png" id="3_b4od1"]
+[ext_resource type="Texture2D" uid="uid://jl4caukav5bm" path="res://sprites/table.png" id="3_iuu36"]
+[ext_resource type="Script" uid="uid://dp11ycvwvdnm3" path="res://scripts/washingMachinesBehavior.gd" id="3_owcan"]
+[ext_resource type="Texture2D" uid="uid://b161elmpumdri" path="res://sprites/lavadoraAbierta.png" id="4_mwwrp"]
+[ext_resource type="Script" uid="uid://01jldom1573f" path="res://scripts/washingMachine1.gd" id="5_x7hqj"]
+[ext_resource type="Script" uid="uid://6ut2beroxepk" path="res://scripts/washingMachine2.gd" id="6_owcan"]
+[ext_resource type="Script" uid="uid://cmg8ewa1lqyf5" path="res://scripts/washingMachine3.gd" id="7_2lgfs"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d5h3d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_b4od1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_mwwrp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_42wf4"]
+size = Vector2(320.5, 281)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aadn1"]
+size = Vector2(385, 294)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_umfan"]
+size = Vector2(411, 261)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mwwrp"]
+size = Vector2(384.5, 276.5)
+
+[node name="Node2D" type="Node2D" unique_id=255255976]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=11142700]
+scale = Vector2(1, 1.0933334)
+texture = ExtResource("1_mw4qg")
+centered = false
+
+[node name="Window" type="Sprite2D" parent="Background" unique_id=1683742574]
+scale = Vector2(1, 0.9146341)
+texture = ExtResource("2_mmojm")
+centered = false
+
+[node name="WashingMachines" type="Node2D" parent="Background" unique_id=303164052]
+scale = Vector2(1, 0.9146341)
+script = ExtResource("3_owcan")
+
+[node name="WashingMachinesAnimatedSprite" type="AnimatedSprite2D" parent="Background/WashingMachines" unique_id=1104886704]
+scale = Vector2(1, 1.0933334)
+sprite_frames = SubResource("SpriteFrames_d5h3d")
+frame_progress = 0.07186124
+centered = false
+
+[node name="WashingMachine1" type="Area2D" parent="Background/WashingMachines" unique_id=1753258133]
+script = ExtResource("5_x7hqj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/WashingMachines/WashingMachine1" unique_id=735717071]
+position = Vector2(838.75, 475.5)
+shape = SubResource("RectangleShape2D_42wf4")
+
+[node name="WashingMachine2" type="Area2D" parent="Background/WashingMachines" unique_id=1543708131]
+script = ExtResource("6_owcan")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/WashingMachines/WashingMachine2" unique_id=1987634083]
+position = Vector2(1226.5, 471)
+shape = SubResource("RectangleShape2D_aadn1")
+
+[node name="WashingMachine3" type="Area2D" parent="Background/WashingMachines" unique_id=360920883]
+script = ExtResource("7_2lgfs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/WashingMachines/WashingMachine3" unique_id=311714859]
+position = Vector2(1208.5, 131.5)
+shape = SubResource("RectangleShape2D_umfan")
+
+[node name="Table" type="Sprite2D" parent="." unique_id=1794936923]
+position = Vector2(0, 4)
+texture = ExtResource("3_iuu36")
+centered = false
+
+[node name="basketClothes" type="Area2D" parent="." unique_id=1844578159]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="basketClothes" unique_id=653256610]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="basketClothes" unique_id=859079312]
+position = Vector2(238, 430)
+shape = SubResource("RectangleShape2D_mwwrp")
