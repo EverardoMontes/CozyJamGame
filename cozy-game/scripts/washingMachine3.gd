@@ -1,15 +1,21 @@
 extends Area2D
-var washing_machine_clothes = 0
+var items = []
 var maximum_capacity = 4
+var color = ""
 
-func add_clothes():
-	if !washing_machine_clothes>=maximum_capacity:
-		washing_machine_clothes+=1
+func add_clothes(clothe):
+	if color=="" and items.is_empty():
+		color=clothe.color
+		items.append(clothe)
+	elif !items.size()>=maximum_capacity and color and clothe.color==color:
+		items.append(clothe)
 	else:
 		print("Washing machine full!")
 
 func remove_clothes():
-	if !washing_machine_clothes<=0:
-		washing_machine_clothes-=1
+	if !items.is_empty():
+		items.pop_back()
+	if items.is_empty():
+		color=""
 	else:
 		print("Washing machine totally empty!")

@@ -66,6 +66,7 @@ position = Vector2(838.75, 475.5)
 shape = SubResource("RectangleShape2D_42wf4")
 
 [node name="WashingMachine2" type="Area2D" parent="Background/WashingMachines" unique_id=1543708131]
+visible = false
 script = ExtResource("6_owcan")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background/WashingMachines/WashingMachine2" unique_id=1987634083]
