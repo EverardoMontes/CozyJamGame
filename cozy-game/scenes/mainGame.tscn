@@ -87,21 +87,21 @@ centered = false
 [node name="WashingMachine1" type="Area2D" parent="Background/WashingMachines" unique_id=1753258133]
 script = ExtResource("5_x7hqj")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/WashingMachines/WashingMachine1" unique_id=735717071]
+[node name="WashingMachine1Collider" type="CollisionShape2D" parent="Background/WashingMachines/WashingMachine1" unique_id=735717071]
 position = Vector2(838.75, 475.5)
 shape = SubResource("RectangleShape2D_42wf4")
 
 [node name="WashingMachine2" type="Area2D" parent="Background/WashingMachines" unique_id=1543708131]
 script = ExtResource("5_x7hqj")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/WashingMachines/WashingMachine2" unique_id=1987634083]
+[node name="WashingMachine2Collider" type="CollisionShape2D" parent="Background/WashingMachines/WashingMachine2" unique_id=1987634083]
 position = Vector2(1226.5, 471)
 shape = SubResource("RectangleShape2D_aadn1")
 
 [node name="WashingMachine3" type="Area2D" parent="Background/WashingMachines" unique_id=360920883]
 script = ExtResource("5_x7hqj")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/WashingMachines/WashingMachine3" unique_id=311714859]
+[node name="WashingMachine3Collider" type="CollisionShape2D" parent="Background/WashingMachines/WashingMachine3" unique_id=311714859]
 position = Vector2(1208.5, 131.5)
 shape = SubResource("RectangleShape2D_umfan")
 

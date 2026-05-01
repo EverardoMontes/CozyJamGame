@@ -5,5 +5,5 @@
 [resource]
 script = ExtResource("1_y746t")
 color = "red"
-sprite_path = "res://sprites/clothe3R.pngg"
+sprite_path = "res://sprites/clothe3R.png"
 metadata/_custom_type_script = "uid://csm76o3a3x1d6"

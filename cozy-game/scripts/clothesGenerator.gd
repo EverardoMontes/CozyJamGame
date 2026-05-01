@@ -4,6 +4,9 @@ extends Node
 
 func generateClothes():
 	var clothesArray = []
-	for i in range(randi_range(3, possibleClothes.size())):
-		clothesArray.append(load(possibleClothes.pick_random()))
+	var pool = possibleClothes.duplicate()
+	pool.shuffle()
+	var amount = randi_range(3, pool.size())
+	for i in range(amount):
+		clothesArray.append(load(pool[i]))
 	return clothesArray
