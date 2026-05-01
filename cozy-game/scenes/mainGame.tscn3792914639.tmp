@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://mfwx77wgwkye" path="res://sprites/window.png" id="2_mmojm"]
 [ext_resource type="Texture2D" uid="uid://bxriq8x82a2vr" path="res://sprites/lavadoraCerrada.png" id="3_b4od1"]
 [ext_resource type="Texture2D" uid="uid://jl4caukav5bm" path="res://sprites/table.png" id="3_iuu36"]
+[ext_resource type="Script" uid="uid://dp11ycvwvdnm3" path="res://scripts/washingMachinesBehavior.gd" id="3_owcan"]
 [ext_resource type="Texture2D" uid="uid://b161elmpumdri" path="res://sprites/lavadoraAbierta.png" id="4_mwwrp"]
 [ext_resource type="Script" uid="uid://01jldom1573f" path="res://scripts/washingMachineObject.gd" id="5_x7hqj"]
 [ext_resource type="Script" uid="uid://dlgu37daqdkns" path="res://scripts/clothesBasket.gd" id="8_umfan"]
@@ -77,6 +78,7 @@ centered = false
 
 [node name="WashingMachines" type="Node2D" parent="Background" unique_id=303164052]
 scale = Vector2(1, 0.9146341)
+script = ExtResource("3_owcan")
 
 [node name="WashingMachinesAnimatedSprite" type="AnimatedSprite2D" parent="Background/WashingMachines" unique_id=1104886704]
 scale = Vector2(1, 1.0933334)

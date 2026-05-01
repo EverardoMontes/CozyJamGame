@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ClotheResource" format=3 uid="uid://bjpca42nn56dn"]
+
+[ext_resource type="Script" uid="uid://csm76o3a3x1d6" path="res://scripts/clotheResource.gd" id="1_ge04w"]
+
+[resource]
+script = ExtResource("1_ge04w")
+color = "white"
+sprite_path = "res://sprites/clothe2B.png"
+metadata/_custom_type_script = "uid://csm76o3a3x1d6"

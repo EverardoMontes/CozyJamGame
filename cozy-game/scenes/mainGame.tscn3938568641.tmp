@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://ceoa6osjxktp6" path="res://sprites/boteContenido2.png" id="11_j74od"]
 [ext_resource type="Texture2D" uid="uid://b8q0yt72ptwi" path="res://sprites/boteContenido3.png" id="12_fpgdv"]
 [ext_resource type="Texture2D" uid="uid://cu2c7a6ia0bow" path="res://sprites/bote.png" id="13_pkqdw"]
+[ext_resource type="Script" uid="uid://cxrj1eudc1kg0" path="res://scripts/dragItem.gd" id="14_1lxpl"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_d5h3d"]
 animations = [{
@@ -126,3 +127,6 @@ centered = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="basketClothes" unique_id=859079312]
 position = Vector2(238, 430)
 shape = SubResource("RectangleShape2D_mwwrp")
+
+[node name="dragItem" type="Node2D" parent="." unique_id=369859043]
+script = ExtResource("14_1lxpl")
