@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://c2hgmycv61xg8"]
+
+[ext_resource type="Script" uid="uid://bp4e3j05gb42t" path="res://scripts/lobby.gd" id="1_o1atq"]
+
+[node name="Clientes" type="Node2D" unique_id=605340567]
+script = ExtResource("1_o1atq")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=916233144]
+position = Vector2(724, 299)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1653548688]
